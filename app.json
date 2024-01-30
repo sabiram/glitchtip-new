@@ -1,0 +1,33 @@
+{
+  "name": "GlitchTip",
+  "description": "An open source reimplementation of Sentry error tracking platform",
+  "repository": "https://gitlab.com/glitchtip/glitchtip.git",
+  "logo": "https://glitchtip.com/assets/logo-again.svg",
+  "website": "https://glitchtip.com",
+  "keywords": ["python", "django"],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "scripts": {
+    "postdeploy": "./manage.py migrate"
+  },
+  "env": {
+    "SECRET_KEY": {
+      "description": "Django Secret Key.",
+      "generator": "secret"
+    }
+  },
+  "image": "glitchtip/glitchtip",
+  "stack": "container",
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ]
+}
