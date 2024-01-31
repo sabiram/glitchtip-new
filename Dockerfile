@@ -12,7 +12,7 @@ ENV DATABASE_URL=""
 ENV REDIS_URL=""
 
 # Set the working directory in the container
-WORKDIR /app
+#WORKDIR /app
 
 # Clone the Git repository
 RUN apt-get update && apt-get install -y git
@@ -21,7 +21,7 @@ RUN git clone -b master https://gitlab.com/glitchtip/glitchtip.git .
 RUN ls -al
 
 # Copy the Django project files into the container
-COPY . /app
+#COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
