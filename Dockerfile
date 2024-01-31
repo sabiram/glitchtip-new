@@ -21,7 +21,7 @@ RUN git clone -b master https://gitlab.com/glitchtip/glitchtip.git .
 RUN ls -al
 
 # Copy the Django project files into the container
-#COPY . /app
+COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
@@ -30,5 +30,5 @@ RUN pip install -r requirements.txt
 EXPOSE 8000
 
 # Run the application
-CMD ["python", "manage.py"]
+#CMD ["python", "manage.py"]
 
