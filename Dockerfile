@@ -1,7 +1,7 @@
 #FROM glitchtip/glitchtip:latest
 
 # Use an official Python runtime as a parent image
-FROM python:3.x
+FROM python:3.11
 
 # Set environment variables
 ENV SECRET_KEY="Enter a random string of characters"
