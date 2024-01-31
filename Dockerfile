@@ -12,7 +12,7 @@ ENV DATABASE_URL=""
 ENV REDIS_URL=""
 
 # Set the working directory in the container
-#WORKDIR /app
+WORKDIR /app
 
 # Clone the Git repository
 RUN apt-get update && apt-get install -y git
