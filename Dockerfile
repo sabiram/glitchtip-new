@@ -18,6 +18,8 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y git
 RUN git clone -b master https://gitlab.com/glitchtip/glitchtip.git .
 
+RUN ls -al
+
 # Copy the Django project files into the container
 COPY . /app
 
